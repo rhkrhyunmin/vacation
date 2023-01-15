@@ -9,13 +9,12 @@ public class PlayerManager : MonoBehaviour
     public bool isJumping;
     public bool isDashing;
     public float speed = 10;
-    public float jumpSpeed = 5;
+    public float jumpSpeed = 15;
     public float isDash = 10;
 
     public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        
     }
 
     public void Update()
