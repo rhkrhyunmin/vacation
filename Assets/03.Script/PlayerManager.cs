@@ -7,8 +7,10 @@ public class PlayerManager : MonoBehaviour
     public Vector2 vector3;
     public Rigidbody2D rigidbody2D;
     public bool isJumping;
+    public bool isDashing;
     public float speed = 10;
-    public float jumpSpeed = 10;
+    public float jumpSpeed = 5;
+    public float isDash = 10;
 
     public void Start()
     {
@@ -37,6 +39,16 @@ public class PlayerManager : MonoBehaviour
         {
             rigidbody2D.AddForce(Vector3.up * jumpSpeed, ForceMode2D.Impulse);
             isJumping = true;
+        }
+    }
+
+    public void Dash()
+    {
+        if(Input.GetKey(KeyCode.X)&& isDashing == false)
+        {
+            rigidbody2D.AddForce(Vector3.left * isDash, ForceMode2D.Force);
+            //rigidbody2D.AddForce(Vector3.right * isDash, ForceMode2D.Force);
+            isDashing = true;
         }
     }
 
