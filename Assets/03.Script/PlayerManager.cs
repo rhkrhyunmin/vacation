@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Vector2 vector2;
+    public Vector2 vector3;
     public Rigidbody2D rigidbody2D;
     public float speed = 10;
 
@@ -20,6 +20,10 @@ public class PlayerManager : MonoBehaviour
 
     public void Move()
     {
-        float x = vector2.
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        vector3 = new Vector2(x, y);
+        transform.position += (Vector3) (vector3 * speed * Time.deltaTime);
     }
 }
