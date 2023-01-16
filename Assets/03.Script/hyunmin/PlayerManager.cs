@@ -6,15 +6,24 @@ public class PlayerManager : MonoBehaviour
 {
     public Vector2 vector3;
     public Rigidbody2D rigidbody2D;
-    public bool isJumping;
-    public bool isDashing;
+
+    [Header("스피드")]
     public float speed = 10;
+    [Header("점프")]
     public float jumpSpeed = 15;
+    public bool isJumping;
+    [Header("대쉬")]
     public float isDash = 10;
+    public bool isDashing;
+    [Header("총")]
+    public GameObject bullet;
+    public Transform bulletSpawnpoint;
+    public Transform Target;
 
     public void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        bulletSpawnpoint = this.transform.Find("BulletSpawnPoint");
     }
 
     public void Update()
@@ -56,6 +65,15 @@ public class PlayerManager : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             isJumping=false;
+        }
+    }
+
+    public void Attack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            var bulletGO = Instantiate<GameObject>(this.bullet);
+            bulletGO.transform.position = this.bulletSpawnpoint.position;
         }
     }
 }
