@@ -5,15 +5,17 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float speed = 5;
+    public float time = 0;
 
     void Update()
     {
-        Destroy(gameObject);
+        DistoryBullet();
     }
 
     public void DistoryBullet()
     {
-        if(Time.deltaTime > 10)
+        time += Time.deltaTime;
+        if (time > 3)
         {
             Destroy(this.gameObject);
         }

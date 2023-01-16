@@ -18,7 +18,7 @@ public class PlayerManager : MonoBehaviour
     [Header("ÃÑ")]
     public GameObject bullet;
     public Transform bulletSpawnpoint;
-    public Transform Target;
+    //public Transform Target;
 
     public void Start()
     {
@@ -30,6 +30,7 @@ public class PlayerManager : MonoBehaviour
     {
         Move();
         Jump();
+        Attack();
     }
 
     public void Move()
@@ -74,6 +75,7 @@ public class PlayerManager : MonoBehaviour
         {
             var bulletGO = Instantiate<GameObject>(this.bullet);
             bulletGO.transform.position = this.bulletSpawnpoint.position;
+            Debug.Log("¤´");
         }
     }
 }
