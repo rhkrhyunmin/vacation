@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     public bool isDashing;
     [Header("รั")]
     public GameObject bullet;
-    public Transform bulletSpawnpoint;
+    public Transform bulletSpawnpoint;      
     //public Transform Target;
 
     public void Start()
