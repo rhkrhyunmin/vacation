@@ -6,7 +6,10 @@ public class PlayerManager : MonoBehaviour
 {
     public Vector2 vector3;
     public Rigidbody2D rigidbody2D;
-
+    [Header("시간")]
+    public float WaitTime = 0.5f;
+    public float timer = 2;
+    public bool isFire;
     [Header("스피드")]
     public float speed = 10;
     [Header("점프")]
@@ -31,6 +34,8 @@ public class PlayerManager : MonoBehaviour
         Move();
         Jump();
         Attack();
+        if(isFire == true)
+            AttackDelay();
     }
 
     public void Move()
@@ -71,11 +76,21 @@ public class PlayerManager : MonoBehaviour
 
     public void Attack()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)&&isFire == false)
         {
             var bulletGO = Instantiate<GameObject>(this.bullet);
             bulletGO.transform.position = this.bulletSpawnpoint.position;
-            Debug.Log("ㅄ");
+            isFire = true;
+        }
+    }
+
+    public void AttackDelay()
+    {
+        timer += Time.deltaTime;
+        if(timer > WaitTime)
+        {
+            timer = 0;
+            isFire=false;
         }
     }
 }
