@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 55
+  controlID: 43
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,22 +322,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/01.Scenes
+    - Assets/04.Prefab
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/01.Scenes
+  - Assets/04.Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\GitHub\vacation
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 6.200012}
-    m_SelectedIDs: fe620000
-    m_LastClickedID: 25342
+    m_SelectedIDs: 04630000
+    m_LastClickedID: 25348
     m_ExpandedIDs: 00000000e2620000e462000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -504,9 +504,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20630000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 18fbffff
+      m_SelectedIDs: 6cf4ffff
+      m_LastClickedID: -2964
+      m_ExpandedIDs: 78f4ffff18fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -846,6 +846,19 @@ MonoBehaviour:
       snapCorner: 0
       id: Scene View/TrailRenderer
       index: 10
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Cinemachine Tool Settings
+      index: 11
       layout: 4
       size: {x: 0, y: 0}
       sizeOverriden: 0
